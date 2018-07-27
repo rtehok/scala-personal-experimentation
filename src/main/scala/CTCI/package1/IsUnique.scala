@@ -28,6 +28,14 @@ object IsUnique {
   }
 
   // In-place
-  def verify3(s: String): Boolean = ???
+  def verify3(s: String): Boolean = {
+    @tailrec
+    def loop(in: List[Char]): Boolean = in match {
+      case Nil => true
+      case c :: cs => if (cs.contains(c)) false else loop(cs)
+    }
+
+    loop(s.toList)
+  }
 
 }

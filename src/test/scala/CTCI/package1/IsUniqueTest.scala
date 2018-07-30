@@ -4,6 +4,12 @@ import org.scalatest.{Matchers, FunSpec}
 
 class IsUniqueTest extends FunSpec with Matchers {
 
+  describe("String is over 128 char") {
+    it("should return false") {
+      IsUnique.isTooLong("a" * 129) shouldBe true
+    }
+  }
+
   describe("IsUnique") {
     describe("when parsing an empty string") {
       val s = ""

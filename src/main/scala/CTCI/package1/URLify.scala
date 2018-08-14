@@ -1,7 +1,7 @@
 package CTCI.package1
 
 object URLify {
-  def verify(str: String, trueLength: Int): String = {
+  def go(str: String, trueLength: Int): String = {
     var spaceNb = 0
     val s_arr = str.toCharArray
     //Count the number of spaces

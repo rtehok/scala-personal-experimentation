@@ -11,6 +11,8 @@ class PalindromePermutationTest extends FunSpec with Matchers {
       PalindromePermutation.go("Tact Caooo") shouldBe true
       PalindromePermutation.go("Tact Caooop") shouldBe false
       PalindromePermutation.go("Tact Caoooop") shouldBe true
+      PalindromePermutation.go("zazaz") shouldBe true
+      PalindromePermutation.go("zaza") shouldBe false
     }
   }
 

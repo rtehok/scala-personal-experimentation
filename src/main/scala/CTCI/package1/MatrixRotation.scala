@@ -4,8 +4,7 @@ import scala.collection.mutable
 
 object MatrixRotation {
   def go(matrix: mutable.ArrayBuffer[mutable.ArrayBuffer[Int]]): mutable.ArrayBuffer[mutable.ArrayBuffer[Int]] = {
-    if (matrix.isEmpty || matrix.length != matrix(0).length) matrix
-    else {
+    if (matrix.nonEmpty && matrix.length == matrix(0).length) {
 
       val n = matrix.length
       for (layer <- 0 until n / 2) {
@@ -22,7 +21,8 @@ object MatrixRotation {
 
         }
       }
-      matrix
+
     }
+    matrix
   }
 }

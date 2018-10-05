@@ -7,14 +7,19 @@ object ZeroMatrix {
     val row = mutable.ArrayBuffer.fill(matrix.size)(false)
     val column = mutable.ArrayBuffer.fill(matrix(0).size)(false)
 
-    matrix.zipWithIndex.foreach { case (matrix_row, i) =>
-      matrix_row.zipWithIndex.foreach {  case (v, j) =>
-        if (v == 0) {
-          row(i) = true
-          column(j) = true
-        }
-      }
-    }
+//    matrix.zipWithIndex.foreach { case (matrix_row, i) =>
+//      matrix_row.zipWithIndex.foreach {  case (v, j) =>
+//        if (v == 0) {
+//          row(i) = true
+//          column(j) = true
+//        }
+//      }
+//    }
+
+    for {
+      i <- matrix.indices
+      j <- matrix(i).indices if matrix(i)(j) == 0
+    } (row(i) = true, column(j) = true)
 
   def nullifyRow(m: mutable.ArrayBuffer[mutable.ArrayBuffer[Int]], row: Int): Unit = {
     m(row) = mutable.ArrayBuffer.fill(column.size)(0)

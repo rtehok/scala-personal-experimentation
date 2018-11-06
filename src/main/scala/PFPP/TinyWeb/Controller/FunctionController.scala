@@ -1,7 +1,7 @@
-package scala.TinyWeb.Controller
+package scala.PFPP.TinyWeb.Controller
 
-import scala.TinyWeb.TinyWeb.{ControllerException, HttpRequest, HttpResponse, RenderingException}
-import scala.TinyWeb.View.View
+import scala.PFPP.TinyWeb.TinyWeb.{ControllerException, HttpRequest, HttpResponse, RenderingException}
+import scala.PFPP.TinyWeb.View.View
 
 trait Controller {
   def handleRequest(httpRequest: HttpRequest): HttpResponse

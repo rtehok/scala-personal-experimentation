@@ -1,6 +1,6 @@
-package scala.TinyWeb.TinyWeb
+package scala.PFPP.TinyWeb.TinyWeb
 
-import scala.TinyWeb.Controller.Controller
+import scala.PFPP.TinyWeb.Controller.Controller
 
 class TinyWeb(controllers: Map[String, Controller], filters: List[HttpRequest => HttpRequest]) {
 

@@ -1,8 +1,8 @@
-package scala.TinyWeb
+package scala.PFPP.TinyWeb
 
-import scala.TinyWeb.Controller.FunctionController
-import scala.TinyWeb.TinyWeb.{HttpRequest, TinyWeb}
-import scala.TinyWeb.View.FunctionView
+import scala.PFPP.TinyWeb.Controller.FunctionController
+import scala.PFPP.TinyWeb.TinyWeb.{HttpRequest, TinyWeb}
+import scala.PFPP.TinyWeb.View.FunctionView
 import scala.util.Random
 
 class Example {

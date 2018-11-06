@@ -1,4 +1,4 @@
-package scala.TinyWeb.TinyWeb
+package scala.PFPP.TinyWeb.TinyWeb
 
 case class HttpRequest(headers: Map[String, String], body: String, path: String)
 

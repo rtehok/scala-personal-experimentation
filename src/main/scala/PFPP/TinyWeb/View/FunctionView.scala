@@ -1,6 +1,6 @@
-package scala.TinyWeb.View
+package scala.PFPP.TinyWeb.View
 
-import scala.TinyWeb.TinyWeb.RenderingException
+import scala.PFPP.TinyWeb.TinyWeb.RenderingException
 
 trait View {
   def render(model: Map[String, List[String]]): String

@@ -1,4 +1,4 @@
-package scala.TinyWeb.TinyWeb
+package scala.PFPP.TinyWeb.TinyWeb
 
 class TinyWebExceptions {
 

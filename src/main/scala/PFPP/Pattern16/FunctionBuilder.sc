@@ -19,8 +19,7 @@ def selector(path: Symbol*): Map[Symbol, Any] => Option[Any] = {
       ds.get(pathSeq.head)
     } else {
       ds.get(pathSeq.head) match {
-        case Some(currentMap: Map[Symbol, Any]) => helper(pathSeq.tail, currentMap)
-        case None => None
+        case Some(currentMap: Map[Symbol, Any] @unchecked) => helper(pathSeq.tail, currentMap)
         case _ => None
       }
     }

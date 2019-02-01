@@ -17,9 +17,9 @@ def solve2(disk_number: Int, source: String, aux: String, dest: String): Unit = 
   if (disk_number == 1) {
     println(s"$source -> $dest")
   } else {
-    solve2(disk_number -1, source, dest, aux)
-    solve2(1, source, "", dest)
-    solve2(disk_number -1, aux, source, dest)
+    solve2(disk_number -1, source, dest, aux) //move top (n-1) disks from source to aux
+    solve2(1, source, "", dest) //move 1 disk from beg to end
+    solve2(disk_number -1, aux, source, dest) //move top (n-1) disks from aux to dest
   }
 }
 

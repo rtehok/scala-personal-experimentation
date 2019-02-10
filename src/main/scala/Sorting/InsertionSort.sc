@@ -1,6 +1,6 @@
 import scala.collection.mutable
 
-def sort(arr: mutable.ListBuffer[Int]): mutable.ListBuffer[Int] = {
+def sort(arr: mutable.ArrayBuffer[Int]): mutable.ArrayBuffer[Int] = {
 
   for (i <- arr.indices) {
     val cursor = arr(i)
@@ -18,4 +18,4 @@ def sort(arr: mutable.ListBuffer[Int]): mutable.ListBuffer[Int] = {
   arr
 }
 
-assert(sort(mutable.ListBuffer[Int](5, 3, 6, 1, 2, 7, 4, 8)) == mutable.ListBuffer[Int](1, 2, 3, 4, 5, 6, 7, 8))
+assert(sort(mutable.ArrayBuffer[Int](5, 3, 6, 1, 2, 7, 4, 8)) == mutable.ArrayBuffer[Int](1, 2, 3, 4, 5, 6, 7, 8))

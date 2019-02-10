@@ -1,7 +1,7 @@
-import scala.collection.mutable
+import scala.collection.mutable.ArrayBuffer
 
-def mergeSort(arr: mutable.ArrayBuffer[Int]): List[Int] = {
-  if (arr.length <= 1) return arr.toList
+def mergeSort(arr: ArrayBuffer[Int]): ArrayBuffer[Int] = {
+  if (arr.length <= 1) return arr
 
   val mid: Int = Math.round(arr.length / 2)
 
@@ -10,7 +10,7 @@ def mergeSort(arr: mutable.ArrayBuffer[Int]): List[Int] = {
   merge(left, right, arr)
 }
 
-def merge(left: List[Int], right: List[Int], res: mutable.ArrayBuffer[Int]): List[Int] = {
+def merge(left: ArrayBuffer[Int], right: ArrayBuffer[Int], res: ArrayBuffer[Int]): ArrayBuffer[Int] = {
   var i = 0
   var j = 0
 
@@ -33,7 +33,7 @@ def merge(left: List[Int], right: List[Int], res: mutable.ArrayBuffer[Int]): Lis
     res(i + j) = right(j)
   }
 
-  res.toList
+  res
 }
 
-assert(mergeSort(mutable.ArrayBuffer(5, 3, 6, 1, 2, 7, 4, 8)) == List(1, 2, 3, 4, 5, 6, 7, 8))
+assert(mergeSort(ArrayBuffer(5, 3, 6, 1, 2, 7, 4, 8)) == ArrayBuffer(1, 2, 3, 4, 5, 6, 7, 8))
